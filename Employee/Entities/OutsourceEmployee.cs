@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Employee.Entities
 {
-    class OutsourceEmployee
+    class OutsourceEmployee : Employee
     {
+
     }
 }
