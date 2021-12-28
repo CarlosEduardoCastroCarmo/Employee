@@ -6,8 +6,25 @@ using System.Threading.Tasks;
 
 namespace Employee.Entities
 {
-    class OutsourceEmployee : Employee
+    class OutsourceEmployee : Employees
     {
+        public double AdicionalCharge { get; set; }
+
+        public OutsourceEmployee()
+        {
+
+        }
+
+        public OutsourceEmployee(string name, int hours, double valuePerHour, double adicionalCharge) :
+            base(name, hours, valuePerHour)
+        {
+            AdicionalCharge = adicionalCharge;
+        }
+
+        public override double Payment()
+        {
+            return base.Payment() + 1.1 * AdicionalCharge;
+        }
 
     }
 }
